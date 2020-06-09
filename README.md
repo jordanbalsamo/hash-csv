@@ -1,4 +1,4 @@
-# hashCSV
+# hash-csv
 
 The following python utility takes CSV input and hashes given columns with SHA2_256.
 
@@ -13,7 +13,7 @@ The following python utility takes CSV input and hashes given columns with SHA2_
 TODO:
 - algorithm (-a --algorithm) - to be manually added into .py script, for now. Accepted that SHA2_256 will be used.
 - headers (-h --headers) - to be manually added into .py script, for now.
-- output (-o --output) - by default will output to hashCSVOutput folder in same directory as script, for now.
+- output (-o --output) - by default will output to hash-csv-output folder in same directory as script, for now.
 
 ## Outputs
 
