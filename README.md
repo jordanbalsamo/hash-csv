@@ -2,7 +2,7 @@
 
 The following python utility takes CSV input and hashes given columns with SHA2_256.
 
-***NOTE: for now, desired CSV should be placed in the dame directory as hash-csv.py script.***
+***NOTE: for now, desired CSV should be placed in the same directory as hash-csv.py script.***
 
 ## Inputs
 
