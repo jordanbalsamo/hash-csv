@@ -2,7 +2,7 @@ import csv
 import hashlib
 import getopt, sys, os
 
-# OPTIONS (Need to be paramterised):
+#TODO: migrate getopt -> click module and allow these constants to be passed in as args on the commandline:
 
 HASH_FIELDS = ['customer_name', 'customer_gender', 'customer_dob']
 
