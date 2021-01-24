@@ -1,11 +1,11 @@
+import click
 import csv
 import hashlib
-import click
 import json
 import os
 
-def hash_csv(source, cfg):
 
+def hash_csv(source, cfg):
     print(f'Hashing has started on {source} 👷.')
     
     output_file = get_file_name(source)
@@ -51,16 +51,19 @@ def hash_csv(source, cfg):
     except (FileNotFoundError, IOError) as e:
         print('Hashing task failed!\n', e)
 
+
 def load_config(config):
     with open(config) as f:
         cfg = json.load(f)
     print('Config loaded 🚀!')
     return cfg
 
+
 def get_file_name(path):
     file = path.split('/')[-1]
     remove_file_type = (file.split('.')[0])   
     return remove_file_type
+
 
 @click.command()
 @click.option('--source')
@@ -79,6 +82,7 @@ def main(source, config):
         os.mkdir(cfg['out_dir'])
     #print(json.dumps(cfg, indent=4, sort_keys=True))
     hash_csv(source, cfg)
-    
+
+  
 if __name__ == '__main__':
     main()
