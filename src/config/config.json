@@ -1,0 +1,8 @@
+{
+    "hash_fields": [
+        "customer_name",
+        "customer_gender",
+        "customer_dob"
+    ],
+    "out_dir": "output/"
+}
