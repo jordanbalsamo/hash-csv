@@ -1,13 +1,18 @@
 # hash_csv
-The following python utility takes a CSV file as input and hashes given columns with SHA2_256.
+hash_csv takes a given CSV file as input and outputs a SHA2_256 hashed CSV. You have full control over the desired columns to be hashed via config 👍.
 
 ## Intall
+
+hash_csv can be installed and setup by running:
 ```
-$ python -m venv .venv
-$ pip install -r requirements.txt
+$ python -m venv .venv              # create a virtual env
+$ source .venv/bin/activate         # activate your virtual env
+$ pip install -r requirements.txt   # install hash_csv dependencies
 ```
 
 ## Usage
+
+hash_csv can be invoked from the commandline with the following:
 ```
 $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 ```
