@@ -1,15 +1,15 @@
-import click
 import csv
 import hashlib
 import json
 import os
 
+import click
 
 def hash_csv(source, cfg):
     print(f'Hashing has started on {source} 👷.')
     
     output_file = get_file_name(source)
-    output_path = f"{cfg['out_dir']}{output_file}-obfuscated.csv"    
+    output_path = f"{cfg['out_dir']}{output_file}-obfuscated.csv"
     hash_fields = cfg['hash_fields']
 
     try:
@@ -83,6 +83,6 @@ def main(source, config):
     #print(json.dumps(cfg, indent=4, sort_keys=True))
     hash_csv(source, cfg)
 
-  
+
 if __name__ == '__main__':
     main()
