@@ -16,6 +16,7 @@ jobs:
     env:
       entrypoint_script: hash_csv.py
       test_script: unittest_hash_csv.py
+      data_file: customer
 
     steps:
     - uses: actions/checkout@v2
@@ -52,10 +53,10 @@ jobs:
     - name: Post-script - sample top 5 rows from 
       run: |
         head -5 customer.csv
-      working-directory: ./data
+      working-directory: ./src/output/
 
     - name: Run ${{env.test_script}} on ${{env.entrypoint_script}}
       run: |
-        head -5 ../data/customer.csv
+        head -5 ../output/customer-obfuscated.csv
         python ${{env.test_script}}
       working-directory: ./tests
