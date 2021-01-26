@@ -52,11 +52,10 @@ jobs:
 
     - name: Post-script - sample top 5 rows from 
       run: |
-        head -5 ${{env.data_file}}.csv
+        head -5 ${{env.data_file}}-obfuscated.csv
       working-directory: ./src/output/
 
     - name: Run ${{env.test_script}} on ${{env.entrypoint_script}}
       run: |
-        head -5 ../output/${{env.data_file}}-obfuscated.csv
         python ${{env.test_script}}
       working-directory: ./tests
