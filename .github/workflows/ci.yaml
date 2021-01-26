@@ -42,21 +42,21 @@ jobs:
 
     - name: Pre-script - sample top 5 rows from 
       run: |
-        head -5 customer.csv
+        head -5 ${{env.data_file}}.csv
       working-directory: ./data
 
     - name: Run ${{env.entrypoint_script}}
       run: |
-        python ${{env.entrypoint_script}} --source ../data/customer.csv --config config/config.json
+        python ${{env.entrypoint_script}} --source ../data/${{env.data_file}}.csv --config config/config.json
       working-directory: ./src
 
     - name: Post-script - sample top 5 rows from 
       run: |
-        head -5 customer.csv
+        head -5 ${{env.data_file}}.csv
       working-directory: ./src/output/
 
     - name: Run ${{env.test_script}} on ${{env.entrypoint_script}}
       run: |
-        head -5 ../output/customer-obfuscated.csv
+        head -5 ../output/${{env.data_file}}-obfuscated.csv
         python ${{env.test_script}}
       working-directory: ./tests
