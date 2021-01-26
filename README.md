@@ -16,6 +16,7 @@ $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 ```
 
 ## Inputs
+```
 - -c --config path/to/my_config.json passed in at runtime. Example:           
             python3 hash-csv.py --config path/to/my_config.json
 
@@ -24,6 +25,7 @@ $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 
 TODO:
 - -a --algorithm - to be manually added into .py script, for now. Accepted that SHA2_256 will be used.
+```
 
 ## Config File
 The config file is a JSON file that is included with this repo. Edit the text in the config/config.json file to customise for your use-case:
