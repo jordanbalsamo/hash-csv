@@ -70,12 +70,12 @@ def get_file_name(path):
 @click.option('--config')
 def main(source, config):
     if not os.path.isfile(config):
-        print('Invalid config file specified.')
+        print('Invalid config file specified ❌.')
         # Return non-zero exit code for CI integration
         exit(1)
     cfg = load_config(config)
     if not os.path.isfile(source):
-        print('Invalid source file specified.')
+        print('Invalid source file specified ❌.')
         # Return non-zero exit code for CI integration
         exit(1)
     if not os.path.isdir(cfg['out_dir']):

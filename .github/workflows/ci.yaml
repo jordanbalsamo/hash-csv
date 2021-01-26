@@ -38,9 +38,12 @@ jobs:
       working-directory: ./src
     - name: Run ${{env.entrypoint_script}}
       run: |
+        pwd
+      working-directory: ./src
+    - name: Run ${{env.entrypoint_script}}
+      run: |
         python ${{env.entrypoint_script}} --source data/customer.csv --config config/config.json
       working-directory: ./src
-
     - name: Run tests
       run: |
         python ${{env.test_script}}
