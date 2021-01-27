@@ -18,7 +18,7 @@ $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 ```
 
 ## Inputs
-See below for an idea of 
+See below for an idea of how to pass arguments to the script via the CLI:
 
 ```
 - --config # Example: $ python3 hash_csv.py --config path/to/my_config.json
