@@ -18,15 +18,12 @@ $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 ```
 
 ## Inputs
+See below for an idea of 
+
 ```
-- -c --config path/to/my_config.json passed in at runtime. Example:           
-            python3 hash-csv.py --config path/to/my_config.json
+- --config # Example: $ python3 hash_csv.py --config path/to/my_config.json
 
-- -s --source path/to/my_data.csv passed in at runtime. Example:          
-            python3 hash-csv.py --source path/to/my_data.csv
-
-TODO:
-- -a --algorithm - to be manually added into .py script, for now. Accepted that SHA2_256 will be used.
+- --source # Example: $ python3 hash_csv.py --source path/to/my_data.csv
 ```
 
 ## Config File
@@ -34,10 +31,13 @@ The config file is a JSON file that is included with this repo. Edit the text in
 
 | Key Name    | What it does |
 | ----------  | ------------ |
-| hash_fields | Defines the target columns to be hashed in the CSV file (e.g. Email)     |
-| out_dir     | Defines the directory prefix where the script will output the hashed CSV |
+| `hash_fields` | Defines the target columns to be hashed in the CSV file (e.g. Email)     |
+| `out_dir`     | Defines the directory prefix where the script will output the hashed CSV |
 
 JSON schema and syntax constraints should be observed, otherwise the script will fail.
 
 ## Outputs
 A CSV hashed according to the above inputs will be produced at the destination defined in config.
+
+## Contributing and TODO
+To contribute to this project, raise a pull request! Check out the issues and project for inspiration.
