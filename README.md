@@ -21,9 +21,13 @@ $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 See below for an idea of how to pass arguments to the script via the CLI:
 
 ```
-- --config # Example: $ python3 hash_csv.py --config path/to/my_config.json
+--config
+# Type: string
+Path to a customisable JSON config file. Refer to config/config.json in this repo. Keys must remain the same, however, you can customise the values to match your use-case.
 
-- --source # Example: $ python3 hash_csv.py --source path/to/my_data.csv
+--source
+# Type: string
+Path to the file that you wish to hash.
 ```
 
 ## Config File
