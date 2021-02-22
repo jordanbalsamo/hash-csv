@@ -1,7 +1,7 @@
 # hash_csv
 hash_csv takes a given CSV file as input and outputs a SHA2_256 hashed CSV. You have full control over the desired columns to be hashed via config 👍.
 
-## Intall
+## ⚙️ Install
 
 hash_csv can be installed and setup by running:
 ```
@@ -10,14 +10,14 @@ $ source .venv/bin/activate         # activate your virtual env
 $ pip install -r requirements.txt   # install hash_csv dependencies
 ```
 
-## Usage
+## 👩‍💻 Usage
 
 hash_csv can be invoked from the commandline with the following:
 ```
 $ python hash_csv.py --source path/to/source.csv --config path/to/config.json
 ```
 
-## Inputs
+## 🔣 Inputs
 See below for an idea of how to pass arguments to the script via the CLI:
 
 ```
@@ -30,7 +30,7 @@ Path to a customisable JSON config file. Refer to config/config.json in this rep
 Path to the file that you wish to hash.
 ```
 
-## Config File
+## 🎚️ Config File
 The config file is a JSON file that is included with this repo. Edit the text in the config/config.json file to customise for your use-case:
 
 | Key Name    | What it does |
@@ -40,8 +40,8 @@ The config file is a JSON file that is included with this repo. Edit the text in
 
 JSON schema and syntax constraints should be observed, otherwise the script will fail.
 
-## Outputs
+## 🔢 Outputs
 A CSV hashed according to the above inputs will be produced at the destination defined in config.
 
-## Contributing and TODO
+## 🚧 Contributing and TODO
 To contribute to this project, raise a pull request! Check out the issues and project for inspiration.
